@@ -243,7 +243,7 @@ with tabs[1]:
     with col_scatter:
         fig = px.scatter(latent_df, x="z1", y="z2", color="label", 
                          title="2D Latent Space (直接点击图中的点进行生成)")
-        event = st.plotly_chart(fig, use_container_width=True, selection_mode="points")
+        event = st.plotly_chart(fig, use_container_width=True, on_select="rerun", selection_mode="points")
 
     with col_gen:
         st.subheader("生成结果")
